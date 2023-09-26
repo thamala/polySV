@@ -19,14 +19,14 @@ fold_sfs <- function(sfs){
 
 est_var <- function(n, S){
 	a1 <- sum(1/1:(n-1))
-    a2 <- sum(1/(1:(n-1))^2)
-    b1 <- (n+1)/(3.0*(n-1))
-    b2 <- 2*((n*n)+n+3.0)/(9*n*(n-1))
-    c1 <- b1-1/a1
-    c2 <- b2-(n+2)/(a1*n)+(a2/(a1*a1))
-    e1 <- c1/a1
-    e2 <- c2/((a1*a1)+a2)
-    sqrt(e1*S+e2*S*(S-1))
+	a2 <- sum(1/(1:(n-1))^2)
+    	b1 <- (n+1)/(3.0*(n-1))
+    	b2 <- 2*((n*n)+n+3.0)/(9*n*(n-1))
+    	c1 <- b1-1/a1
+    	c2 <- b2-(n+2)/(a1*n)+(a2/(a1*a1))
+    	e1 <- c1/a1
+    	e2 <- c2/((a1*a1)+a2)
+    	sqrt(e1*S+e2*S*(S-1))
 }
 
 est_tajD <- function(sfs){
