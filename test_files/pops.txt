@@ -1,0 +1,5 @@
+ind0	pop0
+ind1	pop0
+ind2	pop1
+ind3	pop1
+ind4	pop0
