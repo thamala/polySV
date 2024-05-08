@@ -32,7 +32,7 @@ df[df == "1/1/1/1/1/1"] <- 6
 df <- data.frame(apply(df,2,function(y)as.numeric(as.character(y))))
 
 #Remove samples with > 50% missing data
-mis <- apply(df,2,function(x)sum(is.na(x))/length(x))
+mis <- apply(df,2,function(y)sum(is.na(y))/length(y))
 df <- df[,mis <= 0.5]
 
 #Calculate allele frequencies
@@ -57,7 +57,7 @@ for(i in 1:n){
 pc <- prcomp(cov,scale=T)
 xlab <- paste0("PC1 (",round(summary(pc)$importance[2]*100),"%)")
 ylab <- paste0("PC2 (",round(summary(pc)$importance[5]*100),"%)")
-pcs <- data.frame(PC1=pc$x[,1],PC2=pc$x[,2],id=colnames(df),ploidy=ploidy)
+pcs <- data.frame(PC1=pc$x[,1],PC2=pc$x[,2],id=colnames(df),ploidy=x)
 
 ggplot(pcs, aes(PC1, PC2, color=as.factor(ploidy)))+
   geom_point(size=7)+
