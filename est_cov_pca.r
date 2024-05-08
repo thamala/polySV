@@ -29,7 +29,7 @@ df[df == "0/0/0/1/1/1"] <- 3
 df[df == "0/0/1/1/1/1"] <- 4
 df[df == "0/1/1/1/1/1"] <- 5
 df[df == "1/1/1/1/1/1"] <- 6
-df <- data.frame(apply(df,2,function(x)as.numeric(as.character(x))))
+df <- data.frame(apply(df,2,function(y)as.numeric(as.character(y))))
 
 #Remove samples with > 50% missing data
 mis <- apply(df,2,function(x)sum(is.na(x))/length(x))
@@ -37,7 +37,7 @@ df <- df[,mis <= 0.5]
 
 #Calculate allele frequencies
 x <- apply(df,2,max,na.rm=T)
-p <- apply(df,1,function(x)sum(x,na.rm=T)/sum(x[!is.na(x)]))
+p <- apply(df,1,function(y)sum(y,na.rm=T)/sum(x[!is.na(y)]))
 
 #Removing individuals can change allele frequencies, so we make sure that maf >= 0.05
 df <- df[p >= 0.05 & p <= 0.95,]
