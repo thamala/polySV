@@ -1,6 +1,6 @@
 # polySV
 Code used in:<br/>
-Hämälä T, Moore C, Cowan L, Carlile M, Gopaulchan D, Brandrud MK, Birkeland S, Loose M, Kolář F, Koch MA & Yant L (2023). Impact of whole-genome duplications on structural variant evolution in the plant genus _Cochlearia_. bioRxiv. https://doi.org/10.1101/2023.09.29.560073<br>
+Hämälä T, Moore C, Cowan L, Carlile M, Gopaulchan D, Brandrud MK, Birkeland S, Loose M, Kolář F, Koch MA & Yant L (2024). Impact of whole-genome duplications on structural variant evolution in _Cochlearia_. Nature Communications. https://doi.org/10.1038/s41467-024-49679-y<br>
 <br>
 prune_ld.c: A program for conducting LD-pruning on mixed ploidy VCF files.<br>
 poly_sfs.c: A program for estimating SFS from mixed ploidy VCF files.<br>
