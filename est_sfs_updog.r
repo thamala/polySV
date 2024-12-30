@@ -7,7 +7,7 @@ library(updog)
 fold_sfs <- function(sfs){
 	out <- NA
 	j <- 1
-	for(i in 1:(length(sfs-1))){
+	for(i in 1:length(sfs)){
 		if(i <= length(sfs)/2){
 			if(i == length(sfs)-i) out[j] <- sfs[i]
 			else out[j] <- sfs[i] + sfs[length(sfs)-i]
@@ -106,6 +106,7 @@ for(i in 1:n){
 }
 
 #Example SFS
+#The first column is sites with 1 alternative allele and the last column is sites fixed for the alternative allele
 min20 <- c(2349,621,407,338,178,128,71,85,42,35,41,37,21,16,17,18,10,13,12,9,6,10,7,13,5,5,7,25)
 
 #Folded SFS
